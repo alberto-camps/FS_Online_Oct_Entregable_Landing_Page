@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --mainColor: #009d95;
+    --lightFont: 300;
+    --regularlFont: 400;
+    --BoltFont: 700;
+}
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset para navegadores antiguos */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Mis CSS */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: var(--regularlFont);
+    font-style: normal;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    align-items: center;
+}
+
+.ham {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.ham span {
+    display: block;
+    background-color: var(--mainColor);
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: 160px;
+    transition: all 0.4s linear;
+}
+
+.logo img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.4s linear;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffe4e8;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.lang img {
+  width: 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0, 20px;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--mainColor);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+nav a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+}
+
+.masthead {
+    position: relative;
+}
+
+.masthead img {
+    width: 100%;
+    filter: brightness(70%);
+}
+
+.masthead article {
+    color: white;
+    position: relative;
+    bottom: 130px;
+    left: 70px;
+    background-color: rgba(0, 0, 0, 0.212);
+    padding: 20px;
+}
+
+.masthead article p {
+    font-weight: var(--lightFont);
+    margin-bottom: 12px;
+}
+
+.masthead article h2 {
+    font-weight: var(--BoltFont);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.boton1, .boton2 {
+    background-color: rgb(255, 35, 72);
+    color: white;
+    padding: 6px;
+    font-weight: var(--BoltFont);
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    transition: all 0.3s linear;
+}
+
+.boton1:hover, .boton2:hover {
+    background-color: rgb(310, 80, 140);
+    transition: all 0.3s linear;
+}
+
+.boton1 {
+    transform: translateX(35px);
+}
+
+.boton2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.boton2 img {
+    filter: invert(100%);
+    width: 15px;
+    height: 15px;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width:600px) {
+  nav {
+    display: none;
+  }
+}
+    
+@media (max-width: 760px) {
+    .masthead article {
+        position: static;
+        background-color: #775b33;
+    }
+    .degradado {
+        position: absolute;
+        left: 0;
+        bottom: 175px;
+        background: linear-gradient(180deg,rgba(119, 91, 51, 0) 0%, rgba(119, 91, 51, 1) 100%);
+        width: 100%;
+        height: 65px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ham {
+        display: block;
+    }
+    .categories {
+        display: none;
+    }
+}
